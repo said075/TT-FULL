@@ -197,7 +197,7 @@ const StopCard = ({ stop, dayType }) => {
         </div>
         <button
           onClick={handleToggle}
-          className="text-primary-600 hover:text-primary-700 font-medium"
+          className="text-blue-600 hover:text-blue-700 font-medium"
         >
           {expanded ? 'Hide' : 'View'} Details
         </button>
@@ -222,7 +222,7 @@ const StopCard = ({ stop, dayType }) => {
                     {lines.map((line, index) => (
                       <span
                         key={index}
-                        className="bg-primary-100 text-primary-800 px-2 py-1 rounded text-sm"
+                        className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm"
                       >
                         {line.code}
                       </span>
@@ -290,7 +290,7 @@ const NearbyStops = ({ lat, lng, dayType, onClose }) => {
     <div className="bg-white rounded-lg shadow-md p-6 mb-8">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-          <Navigation className="h-5 w-5 mr-2 text-primary-600" />
+          <Navigation className="h-5 w-5 mr-2 text-blue-600" />
           Stops Near You
         </h3>
         <button

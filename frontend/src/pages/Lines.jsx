@@ -149,7 +149,7 @@ const LineCard = ({ line, dayType }) => {
         </div>
         <button
           onClick={handleToggle}
-          className="text-primary-600 hover:text-primary-700 font-medium"
+          className="text-blue-600 hover:text-blue-700 font-medium"
         >
           {expanded ? 'Hide' : 'View'} Route
         </button>
@@ -167,7 +167,7 @@ const LineCard = ({ line, dayType }) => {
               <div className="space-y-1">
                 {stops.map((stop, index) => (
                   <div key={index} className="flex items-center space-x-2 text-sm">
-                    <div className="w-4 h-4 bg-primary-600 rounded-full flex-shrink-0"></div>
+                    <div className="w-4 h-4 bg-blue-600 rounded-full flex-shrink-0"></div>
                     <span className="text-gray-700">{stop.name}</span>
                     {stop.departure_time && (
                       <span className="text-gray-500 ml-auto">

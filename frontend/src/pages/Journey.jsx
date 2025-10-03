@@ -195,9 +195,9 @@ const Journey = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link
               to="/stops"
-              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all duration-200"
+              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <MapPin className="h-8 w-8 text-primary-600 mr-4" />
+              <MapPin className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <h4 className="font-semibold text-gray-900">Browse Stops</h4>
                 <p className="text-sm text-gray-600">Find stops near you</p>
@@ -206,9 +206,9 @@ const Journey = () => {
             
             <Link
               to="/lines"
-              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all duration-200"
+              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <Bus className="h-8 w-8 text-primary-600 mr-4" />
+              <Bus className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <h4 className="font-semibold text-gray-900">View Lines</h4>
                 <p className="text-sm text-gray-600">Explore all bus routes</p>

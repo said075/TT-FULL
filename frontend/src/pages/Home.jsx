@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-transport-blue to-primary-600 text-white">
+      <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -138,7 +138,7 @@ const Home = () => {
               <div className={`${feature.color} text-white p-3 rounded-lg w-fit mb-4`}>
                 <feature.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
                 {feature.title}
               </h3>
               <p className="text-gray-600">{feature.description}</p>
@@ -156,9 +156,9 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link
               to="/lines"
-              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all duration-200"
+              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <Bus className="h-8 w-8 text-primary-600 mr-4" />
+              <Bus className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <h4 className="font-semibold text-gray-900">View All Lines</h4>
                 <p className="text-sm text-gray-600">Browse available bus routes</p>
@@ -167,9 +167,9 @@ const Home = () => {
             
             <Link
               to="/stops"
-              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all duration-200"
+              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <MapPin className="h-8 w-8 text-primary-600 mr-4" />
+              <MapPin className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <h4 className="font-semibold text-gray-900">Find Stops</h4>
                 <p className="text-sm text-gray-600">Search for stops near you</p>
@@ -178,9 +178,9 @@ const Home = () => {
             
             <Link
               to="/journey"
-              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all duration-200"
+              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <Navigation className="h-8 w-8 text-primary-600 mr-4" />
+              <Navigation className="h-8 w-8 text-blue-600 mr-4" />
               <div>
                 <h4 className="font-semibold text-gray-900">Plan Journey</h4>
                 <p className="text-sm text-gray-600">Get route recommendations</p>
