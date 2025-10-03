@@ -1,0 +1,46 @@
+# Dependencies
+node_modules
+frontend/node_modules
+
+# Development files
+.git
+.gitignore
+README.md
+*.md
+
+# Environment files (except production)
+.env.local
+.env.development
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Build outputs
+frontend/dist
+frontend/build
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Scripts
+start.sh
+stop.sh
+dev.sh

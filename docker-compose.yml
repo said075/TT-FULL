@@ -1,10 +1,9 @@
-version: "3.9"
-
 services:
+  # Database
   postgres:
     image: postgres:15
     container_name: tuzla-transport-db
-    restart: always
+    restart: unless-stopped
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret
@@ -15,6 +14,55 @@ services:
       - pgdata:/var/lib/postgresql/data
       - ./db/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
       - ./db/seed.sql:/docker-entrypoint-initdb.d/2-seed.sql
+    networks:
+      - transport-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d transport"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Backend API
+  backend:
+    build: .
+    container_name: tuzla-transport-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: secret
+      DB_NAME: transport
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    networks:
+      - transport-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Frontend
+  frontend:
+    build: ./frontend
+    container_name: tuzla-transport-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - transport-network
 
 volumes:
   pgdata:
+
+networks:
+  transport-network:
+    driver: bridge

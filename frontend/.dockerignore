@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+
+# Development files
+.git
+.gitignore
+README.md
+
+# Environment files
+.env*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build outputs (will be created during build)
+dist
+build
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
