@@ -1,13 +1,15 @@
 -- Insert lines
 INSERT INTO lines (code, name) VALUES
 ('1', 'Slatina → Centar'),
-('2', 'Bukinje → Centar');
+('2', 'Bukinje → Centar'),
+('3', 'Test → Test');
+
 
 -- Insert stops
-INSERT INTO stops (name, lat, lng) VALUES
-('Slatina', 44.540, 18.670),
-('Centar', 44.545, 18.675),
-('Bukinje', 44.550, 18.660);
+INSERT INTO stops (name) VALUES
+('Slatina'),
+('Centar'),
+('Bukinje');
 
 -- Insert routes
 INSERT INTO routes (line_id, stop_id, stop_sequence) VALUES

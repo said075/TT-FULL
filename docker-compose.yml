@@ -11,7 +11,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
       - ./db/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
       - ./db/seed.sql:/docker-entrypoint-initdb.d/2-seed.sql
     networks:
@@ -60,8 +59,8 @@ services:
     networks:
       - transport-network
 
-volumes:
-  pgdata:
+# volumes:
+# pgdata:
 
 networks:
   transport-network:

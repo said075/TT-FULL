@@ -14,9 +14,7 @@ CREATE TABLE lines (
 -- 2. Stops
 CREATE TABLE stops (
     stop_id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    lat DOUBLE PRECISION,
-    lng DOUBLE PRECISION
+    name TEXT NOT NULL
 );
 
 -- 3. Routes (ordered stops for each line)
